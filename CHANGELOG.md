@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.3.0](https://github.com/fableLab/website-nextjs-front/compare/0.2.0...0.3.0) (2025-06-04)
+
+
+### Features
+
+* **SubTitle:** create subtitle component ([407ca81](https://github.com/fableLab/website-nextjs-front/commit/407ca8107fd9af185b00852a702eb6fc000c3371))
+
 # [0.2.0](https://github.com/fableLab/website-nextjs-front/compare/0.1.2...0.2.0) (2025-06-04)
 
 
