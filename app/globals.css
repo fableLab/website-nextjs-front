@@ -5,6 +5,20 @@
   --foreground: #171717;
 }
 
+@theme {
+--color-azure-50: #f1f7fd;
+--color-azure-100: #e0edf9;
+--color-azure-200: #c7e1f6;
+--color-azure-300: #a1ceef;
+--color-azure-400: #74b2e6;
+--color-azure-500: #5396de;
+--color-azure-600: #3f7bd1;
+--color-azure-700: #3567c0;
+--color-azure-800: #355caa;
+--color-azure-900: #2c497c;
+--color-azure-950: #1f2d4c;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
