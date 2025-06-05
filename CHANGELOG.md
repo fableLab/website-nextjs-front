@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.4.0](https://github.com/fableLab/website-nextjs-front/compare/0.3.0...0.4.0) (2025-06-05)
+
+
+### Features
+
+* **License:** create license component ([f9cc2d1](https://github.com/fableLab/website-nextjs-front/commit/f9cc2d1502f6ad767e3302c208ca9fe9fe616127))
+
 # [0.3.0](https://github.com/fableLab/website-nextjs-front/compare/0.2.0...0.3.0) (2025-06-04)
 
 
