@@ -9,8 +9,8 @@ export default function Header() {
       <div className="col-span-4">
         <Link href="/">
           <Image src="/logo/logo_white.png" alt="Logo white"
-            width={1}
-            height={1}
+            width={100}
+            height={100}
             style={{ height: '32px', width: 'auto' }}
             className='my-5 ms-4 p-1' />
         </Link>

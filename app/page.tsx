@@ -2,102 +2,19 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <p>
+        Pellentesque metus felis, rhoncus vitae odio ac, dapibus molestie odio. Aliquam sem ipsum, laoreet vel massa nec, blandit volutpat erat. Fusce vitae volutpat nulla. Proin fringilla tortor at mattis suscipit. Suspendisse at enim egestas, consequat augue quis, tempor sem. Pellentesque vitae cursus ipsum. Proin pharetra tincidunt purus sed sagittis. Sed mollis turpis velit, a porta nunc accumsan id. Curabitur aliquet felis dictum mi vehicula finibus. Quisque tincidunt, diam vel sodales molestie, urna tellus efficitur tortor, eu efficitur mi turpis eget nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Curabitur mollis volutpat lacinia. Proin ornare arcu sit amet eros placerat, feugiat efficitur justo lobortis. Ut dapibus posuere pulvinar. Suspendisse pharetra arcu nec nunc molestie, at imperdiet enim volutpat. Aenean ut dolor convallis, ultrices felis sit amet, lobortis libero.
+      </p>
+      <p>
+        Sed erat elit, tincidunt nec dui ac, maximus dictum purus. Nunc ut nisl sollicitudin, scelerisque augue a, porta lacus. Duis congue est quis ante sollicitudin, ac mattis libero dapibus. Praesent venenatis ligula id odio egestas, eu cursus ipsum facilisis. Nullam bibendum in massa in tincidunt. Sed fermentum non nisi ac mattis. Duis nec elit id augue fringilla egestas eget vitae eros. Mauris lacinia pharetra aliquam. Nullam justo arcu, fermentum non enim sed, varius interdum risus.
+      </p>
+      <p>
+        Sed posuere gravida dapibus. Nunc id tellus turpis. Phasellus interdum posuere leo at rutrum. In gravida iaculis turpis, id aliquam elit. Nam non consequat augue, eget tempor nisl. Nullam at orci felis. Donec quis vestibulum nulla. Phasellus blandit sem ut odio molestie, ut lobortis nunc sodales. Aliquam vitae pulvinar ipsum, eget porttitor tortor. Aliquam ex neque, pharetra vitae ornare eget, scelerisque ut arcu.
+      </p>
+      <p>
+        Vestibulum quis erat pharetra, facilisis ipsum et, rhoncus est. In elementum commodo tortor. Curabitur venenatis tellus sed urna auctor, in fermentum lorem pellentesque. Phasellus hendrerit, turpis ut malesuada aliquam, lacus sem volutpat diam, non eleifend mi sapien eget diam. Duis feugiat, justo sit amet faucibus accumsan, mi orci pretium tortor, id auctor orci augue vitae sapien. Ut laoreet nibh nec ullamcorper tincidunt. Morbi ut lacinia tortor, quis ullamcorper ligula. Cras sed dui augue. Aliquam blandit viverra libero quis ullamcorper. Maecenas viverra vestibulum massa, ac mollis magna ultrices ac. Proin efficitur laoreet nisl, nec sagittis ligula luctus vel. Suspendisse et malesuada turpis, ullamcorper mattis tortor. Morbi cursus sapien velit, non hendrerit libero pellentesque at. Ut ac molestie mi. Donec laoreet massa sit amet blandit sodales. Curabitur sem ipsum, porttitor vel euismod a, consequat ut odio.
+      </p >
+    </>
   );
 }
