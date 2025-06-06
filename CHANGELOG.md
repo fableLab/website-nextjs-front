@@ -1,5 +1,14 @@
 # Changelog
 
+# [0.6.0](https://github.com/fableLab/website-nextjs-front/compare/0.4.0...0.6.0) (2025-06-06)
+
+
+### Features
+
+* **Footer:** Create Footer component ([7fda07f](https://github.com/fableLab/website-nextjs-front/commit/7fda07f4a0cfbfc1b59408756b61deb542c6a668))
+* **Header:** Create Header component ([13cb200](https://github.com/fableLab/website-nextjs-front/commit/13cb200c78077b7c6ac2e13b7c8b831643d9c773))
+* **layout:** Create basic layout ([607bedf](https://github.com/fableLab/website-nextjs-front/commit/607bedfeb709fa76df75a06287617e596e5859cb))
+
 # [0.5.0](https://github.com/fableLab/website-nextjs-front/compare/0.2.0...0.5.0) (2025-06-06)
 
 
