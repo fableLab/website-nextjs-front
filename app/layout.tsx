@@ -35,7 +35,7 @@ export default function RootLayout({
       >
         <Header />
         <aside className="grid grid-cols-12">
-          <div className="col-span-4 bg-[#C9bff2]">
+          <div className="col-span-4 bg-lavender-200">
           </div>
           <div className="col-span-8 bg-white py-4 px-6">
             {children}

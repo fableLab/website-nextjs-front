@@ -1,15 +1,15 @@
-import LicenseItem, {LicenseItemProps} from './LicenseItem';
+import LicenseItem, { LicenseItemProps } from './LicenseItem';
 
 type LicenseProps = {
-    description: string;
-    licenseItems: LicenseItemProps[];
+  description: string;
+  licenseItems: LicenseItemProps[];
 };
 
 
 export default function License({ description, licenseItems }: LicenseProps) {
   return (
-    <section className="max-w-3xl mx-auto px-4 py-8 space-y-6 text-black">
-      <h2 className='font-bold text-3xl text-blue-800'>Licence libre.</h2>
+    <section className="py-8 space-y-6 text-black">
+      <h2 className='text-4xl text-azure-800 font-extrabold'>Licence libre.</h2>
       <p className="text-base">{description}</p>
       <div className='space-y-5'>
         {licenseItems.map((item, index) => (
@@ -21,7 +21,7 @@ export default function License({ description, licenseItems }: LicenseProps) {
         <p><a href='#' className='underline text-base text-black hover:text-blue-700'>Retrouvez toutes les modalités de partage de la ressource sur notre page dédiée.</a></p>
         <p><a href='#' className='underline text-base text-black hover:text-blue-700'>Écrivez-nous vos questions et retours via notre formulaire de contact.</a></p>
       </div>
-      
+
     </section>
   );
 }

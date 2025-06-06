@@ -10,7 +10,7 @@ const zigZagStyle = {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#753345] grid grid-cols-12 text-white">
+    <footer className="bg-camelot-800 grid grid-cols-12 text-white">
       <div className="col-span-4 px-8 pt-4 pb-8">
         <ul>
           {

@@ -5,7 +5,7 @@ const headerItems = ["L'association", "Projets", "Ressources", "Contact", "Bouti
 
 export default function Header() {
   return (
-    <header className="bg-[#753345] grid grid-cols-12 border-3 border-white">
+    <header className="bg-camelot-800 grid grid-cols-12 border-3 border-white">
       <div className="col-span-4">
         <Link href="/">
           <Image src="/logo/logo_white.png" alt="Logo white"
