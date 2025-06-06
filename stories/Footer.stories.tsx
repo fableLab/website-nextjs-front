@@ -1,7 +1,6 @@
 import { expect } from 'storybook/test';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import Footer from '@/app/components/layout/Footer';
-import "@/app/globals.css";
 
 const meta = {
   component: Footer,
