@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Title from "./components/ui/Title";
 import License from "./components/ui/License";
 import SubTitle from "./components/ui/SubTitle";

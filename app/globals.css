@@ -12,6 +12,8 @@
     --font-sans: var(--font-figtree);
     --font-serif: var(--font-playfair);
     --font-display: var(--font-figtree);
+    --font-figtree: var(--font-figtree);
+    --font-playfair: var(--font-playfair);
 }
 
 @media (prefers-color-scheme: dark) {

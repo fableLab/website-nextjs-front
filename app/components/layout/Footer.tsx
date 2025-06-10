@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const footerItems = ["Mentions légales", "CGU", "Plan du site", "License Creative Commons"];
 const zigZagStyle = {
   borderImageSource: 'url("/zigzags/zigzag-footer.svg")',
   borderImageSlice: 52,
