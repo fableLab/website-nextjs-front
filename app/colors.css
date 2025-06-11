@@ -46,4 +46,16 @@
     --color-cinnabar-800: #9a1f1a;
     --color-cinnabar-900: #80201c;
     --color-cinnabar-950: #450c0a;
+
+    --color-bees-50: #fdfee8;
+    --color-bees-100: #fdffc2;
+    --color-bees-200: #feff88;
+    --color-bees-300: #fff844;
+    --color-bees-400: #feeb1a; /* primary */
+    --color-bees-500: #eed104;
+    --color-bees-600: #cda301;
+    --color-bees-700: #a47504;
+    --color-bees-800: #875b0c;
+    --color-bees-900: #734b10;
+    --color-bees-950: #432705;
 }
