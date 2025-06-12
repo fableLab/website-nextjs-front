@@ -1,6 +1,31 @@
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import Link from 'next/link';
 
-const headerItems = ["L'association", "Projets", "Ressources", "Contact", "Boutique"];
+const headerLinks = [
+  {
+    label: "L'association", subLinks: [
+      { label: 'Manifeste', href: "/pages/manifeste" },
+      { label: 'Notre histoire', href: "/pages/notre-histoire" },
+      { label: 'Notre équipe', href: "/pages/notre-equipe" },
+      { label: 'Nos savoir-faire', href: "/pages/nos-savoir-faire" },
+      { label: "Les rapports d'activités", href: "/pages/rapports-d-activites" },
+      { label: "La communauté fable-lab", href: "/pages/communaute-fable-lab" }
+    ]
+  },
+  {
+    label: "Projets", subLinks: [
+      { label: 'Médiation linguistique', href: "/projets" },
+      { label: 'Médiation littéraire', href: "/projets" },
+      { label: 'Tous les projets', href: "/projets" }
+    ]
+  },
+];
+
+const headerBasicLinks = [
+  { label: "Ressources", href: "/ressources" },
+  { label: "Contact", href: "/contact" },
+  { label: "Boutique", href: "https://boutique.fable-lab.org/" }
+];
 
 export default function Header() {
   return (
@@ -11,14 +36,36 @@ export default function Header() {
         </Link>
       </div>
       <nav className="md:col-span-8 col-span-0 md:visible invisible flex flex-row content-center">
-        {
-          headerItems.map((item) => (
-            <div className="flex-1 border-l-3 border-white hidden md:inline-block" key={item}>
-              <Link href="#" className="text-white text-center w-full inline-block my-5 text-2xl">{item}</Link>
-            </div>
-          ))
-        }
+        {headerLinks.map((link) => (
+          <div key={link.label} className="flex-1 border-l-3 border-white hidden md:inline-block relative">
+            <Menu>
+              <MenuButton className="w-full text-white text-center inline-block py-5 text-2xl cursor-pointer">
+                {link.label}
+              </MenuButton>
+              <MenuItems
+                transition
+                className="mt-[3px] absolute z-10 origin-top-right bg-camelot-800 ring-3 ring-white w-full transition focus:outline-hidden"
+              >
+                {link?.subLinks?.map((subLink) => (
+                  <Link href={subLink.href} key={subLink.label} className="block py-5 ring-3 ring-white bg-camelot-800 text-white text-center text-2xl">
+                    <MenuItem>
+                      <span>{subLink.label}</span>
+                    </MenuItem>
+                  </Link>
+                ))}
+              </MenuItems>
+            </Menu>
+          </div>
+        ))}
+
+        {headerBasicLinks.map((link, key) => (
+          <div className="flex-1 border-l-3 border-white hidden md:inline-block relative" key={key}>
+            <Link href={link.href} className="text-white text-center w-full inline-block py-5 text-2xl">
+              {link.label}
+            </Link>
+          </div>
+        ))}
       </nav>
-    </header>
+    </header >
   );
 }
