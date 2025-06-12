@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const zigZagStyle = {
@@ -10,7 +9,7 @@ const zigZagStyle = {
 export default function Footer() {
   return (
     <footer className="bg-camelot-800 grid grid-cols-12 text-white">
-      <div className="col-span-4 px-8 pt-4 pb-8">
+      <div className="md:col-span-4 col-span-12 px-8 pt-4 pb-8">
         <ul>
           {
             ["Mentions légales", "CGU", "Plan du site", "License Creative Commons"].map((item) => (
@@ -21,7 +20,7 @@ export default function Footer() {
           }
         </ul>
       </div>
-      <div className="col-span-3 border-l-14 border-white border-dashed px-8 pt-4 pb-8"
+      <div className="md:col-span-3 col-span-12 md:border-l-14 border-white border-dashed px-8 pt-4 pb-8"
         style={zigZagStyle}
       >
         <ul>
@@ -30,7 +29,7 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-      <div className="col-span-3 border-l-14 border-white border-dashed px-8 pt-4 pb-8"
+      <div className="md:col-span-3 col-span-12 md:border-l-14 border-white border-dashed px-8 pt-4 pb-8"
         style={zigZagStyle}
       >
         <ul>
@@ -43,15 +42,10 @@ export default function Footer() {
           }
         </ul>
       </div>
-      <div className="col-span-2 border-l-14 border-white border-dashed text-[#ffed38] px-8 pt-4 pb-8"
+      <div className="md:col-span-2 col-span-12 md:border-l-14 border-white border-dashed text-[#ffed38] px-8 pt-4 pb-8"
         style={zigZagStyle}
       >
-        <Image src="/arrows/arrow-footer.svg" alt="Arrow back to top"
-          width={1}
-          height={1}
-          style={{ height: 'auto', width: '25%' }}
-          className="mx-auto" />
-
+        <img src="/arrows/arrow-footer.svg" className='md:w-1/4 w-1/10 mx-auto' />
         <p className='text-center mt-3'>Retour en haut</p>
       </div>
     </footer>
