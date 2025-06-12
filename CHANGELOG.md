@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.8.0](https://github.com/fableLab/website-nextjs-front/compare/0.7.0...0.8.0) (2025-06-12)
+
+
+### Features
+
+* **components:** display ButtonDownload component ([6c58676](https://github.com/fableLab/website-nextjs-front/commit/6c58676606b75bf209e70c25f1cca7d6bf5b007c))
+
 # [0.7.0](https://github.com/fableLab/website-nextjs-front/compare/0.6.1...0.7.0) (2025-06-12)
 
 
