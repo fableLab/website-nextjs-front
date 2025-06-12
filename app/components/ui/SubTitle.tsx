@@ -1,4 +1,4 @@
-type SubTitleProps = {
+export type SubTitleProps = {
   name: string,
   font?: string
 };

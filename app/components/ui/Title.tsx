@@ -1,4 +1,4 @@
-type TitleProps = {
+export type TitleProps = {
   name: string,
   font?: string
 };
