@@ -1,26 +1,18 @@
 'use client'
 import { useParams } from 'next/navigation'
 import useSWR from 'swr'
-// import { createElement } from 'react'
 import Title, { TitleProps } from '@/app/components/ui/Title'
 import SubTitle, { SubTitleProps } from '@/app/components/ui/SubTitle'
 import ButtonLink, { ButtonLinkProps } from '@/app/components/ui/ButtonLink'
 import ButtonDownload, { ButtonDownloadProps } from '@/app/components/ui/ButtonDownload'
-
-// const Components = {
-//   'global.title': Title,
-//   'global.sub-title': SubTitle,
-//   'global.button-link': ButtonLink,
-//   'global.button-download': ButtonDownload
-// } as const
-
-//type ComponentKeys = "global.title" | "global.sub-title" | "global.button" | "global.button-media";
+import License, { LicenseProps } from '@/app/components/ui/License'
 
 type ComponentPropsMap = {
   "elements.title": TitleProps;
   "elements.sub-title": SubTitleProps;
   "elements.button-link": ButtonLinkProps;
   "elements.button-download": ButtonDownloadProps;
+  "elements.license": LicenseProps;
 };
 
 type ComponentKeys = keyof ComponentPropsMap;
@@ -68,6 +60,8 @@ export default function Page() {
             return <ButtonLink key={index} {...(component as ButtonLinkProps)} />
           case 'elements.button-download':
             return <ButtonDownload key={index} {...(component as ButtonDownloadProps)} />
+          case 'elements.license':
+            return <License key={index} {...(component as LicenseProps)} />
           default:
             return null
         }

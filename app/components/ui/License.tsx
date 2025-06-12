@@ -1,6 +1,6 @@
 import LicenseItem, { LicenseItemProps } from './LicenseItem';
 
-type LicenseProps = {
+export type LicenseProps = {
   description: string;
   licenseItems: LicenseItemProps[];
 };
