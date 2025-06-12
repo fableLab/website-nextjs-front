@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.10.0](https://github.com/fableLab/website-nextjs-front/compare/0.9.1...0.10.0) (2025-06-12)
+
+
+### Features
+
+* **Header:** add dropdown navigation menu ([49b9d61](https://github.com/fableLab/website-nextjs-front/commit/49b9d61f8db46a5611a4729e4e162f7555b8a6a1))
+
 ## [0.9.1](https://github.com/fableLab/website-nextjs-front/compare/0.8.0...0.9.1) (2025-06-12)
 
 
