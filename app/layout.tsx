@@ -31,10 +31,10 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${figtree.variable} ${playFair.variable} antialiased`}
+        className={`${figtree.variable} ${playFair.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <aside className="grid grid-cols-12">
+        <aside className="grid grid-cols-12 flex-grow">
           <div className="md:col-span-4 col-span-0 bg-lavender-200">
           </div>
           <div className="md:col-span-8 col-span-12 bg-white py-4 px-6">
