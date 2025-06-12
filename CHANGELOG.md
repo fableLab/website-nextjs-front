@@ -1,5 +1,18 @@
 # Changelog
 
+# [0.7.0](https://github.com/fableLab/website-nextjs-front/compare/0.6.1...0.7.0) (2025-06-12)
+
+
+### Bug Fixes
+
+* **no-unused-vars:** remove unused variables for ESLint ([776f4f4](https://github.com/fableLab/website-nextjs-front/commit/776f4f4cb8450d6adb5b070db4b37cde26e2093f))
+
+
+### Features
+
+* **buttons:** create buttons component ([5f60e6d](https://github.com/fableLab/website-nextjs-front/commit/5f60e6de401fa9adc7ee0f6aa0563ed343aecad8))
+* **pages:** display dynamic content from Strapi ([0f89428](https://github.com/fableLab/website-nextjs-front/commit/0f89428227d5fe107b17f053c580f08e20460c4c))
+
 ## [0.6.1](https://github.com/fableLab/website-nextjs-front/compare/0.4.0...0.6.1) (2025-06-06)
 
 
