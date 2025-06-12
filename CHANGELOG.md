@@ -1,5 +1,7 @@
 # Changelog
 
+## [0.10.1](https://github.com/fableLab/website-nextjs-front/compare/0.10.0...0.10.1) (2025-06-12)
+
 # [0.10.0](https://github.com/fableLab/website-nextjs-front/compare/0.9.1...0.10.0) (2025-06-12)
 
 
