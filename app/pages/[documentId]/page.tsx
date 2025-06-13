@@ -6,6 +6,7 @@ import SubTitle, { SubTitleProps } from '@/app/components/ui/SubTitle'
 import ButtonLink, { ButtonLinkProps } from '@/app/components/ui/ButtonLink'
 import ButtonDownload, { ButtonDownloadProps } from '@/app/components/ui/ButtonDownload'
 import License, { LicenseProps } from '@/app/components/ui/License'
+import FrameCard, { FrameCardProps } from '@/app/components/ui/FrameCard'
 
 type ComponentPropsMap = {
   "elements.title": TitleProps;
@@ -13,6 +14,7 @@ type ComponentPropsMap = {
   "elements.button-link": ButtonLinkProps;
   "elements.button-download": ButtonDownloadProps;
   "elements.license": LicenseProps;
+  "elements.frame-card": FrameCardProps;
 };
 
 type ComponentKeys = keyof ComponentPropsMap;
@@ -36,11 +38,12 @@ const fetcher = (url: string) =>
   })
 
 export default function Page() {
-  const { documentId } = useParams<{ documentId: string }>()
+  const { documentId } = useParams<{ documentId: string }>();
+
   const { data, error, isLoading } = useSWR<PageResponse>(
-    documentId ? `https://strapi.fable-lab.org/api/pages/${documentId}?populate[contents][populate]=*` : null,
+    documentId ? `http://localhost:1337/api/pages/${documentId}?populate[contents][populate]=*` : null,
     fetcher
-  )
+  );
 
   const components = data?.data?.contents ?? []
 
@@ -62,6 +65,8 @@ export default function Page() {
             return <ButtonDownload key={index} {...(component as ButtonDownloadProps)} />
           case 'elements.license':
             return <License key={index} {...(component as LicenseProps)} />
+          case 'elements.frame-card':
+            return <FrameCard key={index} {...(component as FrameCardProps)} />
           default:
             return null
         }
