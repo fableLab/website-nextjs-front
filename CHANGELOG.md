@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.11.0](https://github.com/fableLab/website-nextjs-front/compare/0.10.1...0.11.0) (2025-06-16)
+
+
+### Features
+
+* **framecard:** create frame card component ([c060ff6](https://github.com/fableLab/website-nextjs-front/commit/c060ff6337d4bd540dd9c4b7ee5bce6daaf2cccf))
+
 ## [0.10.1](https://github.com/fableLab/website-nextjs-front/compare/0.10.0...0.10.1) (2025-06-12)
 
 # [0.10.0](https://github.com/fableLab/website-nextjs-front/compare/0.9.1...0.10.0) (2025-06-12)
