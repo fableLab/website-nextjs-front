@@ -7,6 +7,7 @@ import ButtonLink, { ButtonLinkProps } from '@/app/components/ui/ButtonLink'
 import ButtonDownload, { ButtonDownloadProps } from '@/app/components/ui/ButtonDownload'
 import License, { LicenseProps } from '@/app/components/ui/License'
 import FrameCard, { FrameCardProps } from '@/app/components/ui/FrameCard'
+import Image, { ImageProps } from '@/app/components/ui/Image'
 
 type ComponentPropsMap = {
   "elements.title": TitleProps;
@@ -15,6 +16,7 @@ type ComponentPropsMap = {
   "elements.button-download": ButtonDownloadProps;
   "elements.license": LicenseProps;
   "elements.frame-card": FrameCardProps;
+  "elements.image": ImageProps
 };
 
 type ComponentKeys = keyof ComponentPropsMap;
@@ -67,6 +69,8 @@ export default function Page() {
             return <License key={index} {...(component as LicenseProps)} />
           case 'elements.frame-card':
             return <FrameCard key={index} {...(component as FrameCardProps)} />
+          case 'elements.image':
+            return <Image key={index} {...(component as ImageProps)} />
           default:
             return null
         }
