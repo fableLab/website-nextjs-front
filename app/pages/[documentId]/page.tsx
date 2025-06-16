@@ -43,7 +43,7 @@ export default function Page() {
   const { documentId } = useParams<{ documentId: string }>();
 
   const { data, error, isLoading } = useSWR<PageResponse>(
-    documentId ? `http://localhost:1337/api/pages/${documentId}?populate[contents][populate]=*` : null,
+    documentId ? `https://strapi.fable-lab.org/api/pages/${documentId}?populate[contents][populate]=*` : null,
     fetcher
   );
 
