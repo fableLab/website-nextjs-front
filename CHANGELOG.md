@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.12.1](https://github.com/fableLab/website-nextjs-front/compare/0.12.0...0.12.1) (2025-06-16)
+
+
+### Bug Fixes
+
+* **page:** fix Strapi API url ([602917e](https://github.com/fableLab/website-nextjs-front/commit/602917e74aa076c0d47a479c8360ef1ad65602a4))
+
 # [0.12.0](https://github.com/fableLab/website-nextjs-front/compare/0.10.1...0.12.0) (2025-06-16)
 
 
