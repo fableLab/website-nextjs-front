@@ -13,7 +13,7 @@ type Story = StoryObj<typeof FrameCard>;
 export const Default: Story = {
   args: {
     title: 'Les partenaires du projet.',
-    colours: 'bees-400',
+    color: 'yellow',
     body: [
       {
         type: "paragraph",
@@ -42,7 +42,7 @@ export const Default: Story = {
       },
     ],
     image: {
-      url: '/partenaires_projet_logo.png'
+      url: 'https://www.fable-lab.com/wp-content/uploads/2022/03/Photo_imagiers_senmo4_site_web.png'
     },
   },
 
