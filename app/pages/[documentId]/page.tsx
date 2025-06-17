@@ -8,6 +8,7 @@ import ButtonDownload, { ButtonDownloadProps } from '@/app/components/ui/ButtonD
 import License, { LicenseProps } from '@/app/components/ui/License'
 import FrameCard, { FrameCardProps } from '@/app/components/ui/FrameCard'
 import Image, { ImageProps } from '@/app/components/ui/Image'
+import Paragraph, { ParagraphProps } from '@/app/components/ui/Paragraph'
 
 type ComponentPropsMap = {
   "elements.title": TitleProps;
@@ -16,7 +17,8 @@ type ComponentPropsMap = {
   "elements.button-download": ButtonDownloadProps;
   "elements.license": LicenseProps;
   "elements.frame-card": FrameCardProps;
-  "elements.image": ImageProps
+  "elements.image": ImageProps;
+  "elements.paragraph": ParagraphProps;
 };
 
 type ComponentKeys = keyof ComponentPropsMap;
@@ -43,11 +45,13 @@ export default function Page() {
   const { documentId } = useParams<{ documentId: string }>();
 
   const { data, error, isLoading } = useSWR<PageResponse>(
-    documentId ? `https://strapi.fable-lab.org/api/pages/${documentId}?populate[contents][populate]=*` : null,
+    documentId ? `http://localhost:1337/api/pages/${documentId}?populate[contents][populate]=*` : null,
     fetcher
   );
 
   const components = data?.data?.contents ?? []
+
+  console.log("components: ", components)
 
   if (isLoading) return <p>Chargement…</p>
   if (error) return <p>Erreur lors du chargement de la page.</p>
@@ -71,6 +75,8 @@ export default function Page() {
             return <FrameCard key={index} {...(component as FrameCardProps)} />
           case 'elements.image':
             return <Image key={index} {...(component as ImageProps)} />
+          case 'elements.paragraph':
+            return <Paragraph key={index} {...(component as ParagraphProps)} />
           default:
             return null
         }

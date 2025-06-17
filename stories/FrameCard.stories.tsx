@@ -46,13 +46,36 @@ export const Default: Story = {
     },
   },
 
-  play: async ({ canvas }) => {
+  play: async ({ canvas, args }) => {
+
+    const EXPECTED_BORDER_CLASS = {
+    'yellow': 'border-bees-400',
+    'violet': 'border-lavender-200',
+    'prune': 'border-camelot-800',
+    'orange': 'border-cinnabar-400',
+    'blue': 'border-azure-200'
+    };
+
+    const VALID_COLORS = Object.keys(EXPECTED_BORDER_CLASS);
+
+  if (!VALID_COLORS.includes(args.color)) {
+    throw new Error(
+      `❌ Invalid color "${args.color}". Must be one of: ${VALID_COLORS.join(', ')}`
+    );
+  }
+
+  const expectedClass = EXPECTED_BORDER_CLASS[args.color as keyof typeof EXPECTED_BORDER_CLASS];
+
+  // Make sure your FrameCard div has data-testid="frame-card"
+  const card = await canvas.getByTestId('frame-card');
+  await expect(card.className).toContain(expectedClass);
+
 
     // ✅ Title check
     const heading = await canvas.getByRole('heading', { name: 'Les partenaires du projet.' });
     await expect(heading).toBeVisible();
 
-    // ✅ Paragraph content check
+    // ✅ Body content check
     await expect(canvas.getByText(/Ce travail a été mené grâce au soutien/)).toBeVisible();
     await expect(canvas.getByText('CAF 93')).toBeVisible();
     await expect(canvas.getByText(/Nous avons été accueillis/)).toBeVisible();

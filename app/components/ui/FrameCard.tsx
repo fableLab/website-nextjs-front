@@ -28,6 +28,8 @@ export default function FrameCard({ title, color, body, image }: FrameCardProps)
 
   const hasImage = !!image?.url;
 
+  const hasImage = !!image?.url;
+
   return (
     <div className={`flex flex-col md:flex-row border-6 p-10 rounded-lg w-full ${borderColors[color]}`} data-testid="frame-card">
       <div className={`w-full ${hasImage ? 'md:w-2/3' : ''} space-y-4`}>
