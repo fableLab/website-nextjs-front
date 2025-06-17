@@ -13,7 +13,11 @@ type Story = StoryObj<typeof FrameCard>;
 export const Default: Story = {
   args: {
     title: 'Les partenaires du projet.',
+<<<<<<< HEAD
     color: 'yellow',
+=======
+    colours: 'bees-400',
+>>>>>>> c060ff6 (feat(framecard): create frame card component)
     body: [
       {
         type: "paragraph",
@@ -42,6 +46,7 @@ export const Default: Story = {
       },
     ],
     image: {
+<<<<<<< HEAD
       url: 'https://www.fable-lab.com/wp-content/uploads/2022/03/Photo_imagiers_senmo4_site_web.png'
     },
   },
@@ -70,12 +75,23 @@ export const Default: Story = {
   const card = await canvas.getByTestId('frame-card');
   await expect(card.className).toContain(expectedClass);
 
+=======
+      url: '/partenaires_projet_logo.png'
+    },
+  },
+
+  play: async ({ canvas }) => {
+>>>>>>> c060ff6 (feat(framecard): create frame card component)
 
     // ✅ Title check
     const heading = await canvas.getByRole('heading', { name: 'Les partenaires du projet.' });
     await expect(heading).toBeVisible();
 
+<<<<<<< HEAD
     // ✅ Body content check
+=======
+    // ✅ Paragraph content check
+>>>>>>> c060ff6 (feat(framecard): create frame card component)
     await expect(canvas.getByText(/Ce travail a été mené grâce au soutien/)).toBeVisible();
     await expect(canvas.getByText('CAF 93')).toBeVisible();
     await expect(canvas.getByText(/Nous avons été accueillis/)).toBeVisible();
@@ -84,4 +100,8 @@ export const Default: Story = {
     const image = canvas.getByRole('img', { name: /Frame Card/i });
     await expect(image).toBeVisible();
   }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> c060ff6 (feat(framecard): create frame card component)

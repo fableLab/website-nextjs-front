@@ -43,7 +43,7 @@ const fetcher = (url: string) =>
 
 export default function Page() {
   const { documentId } = useParams<{ documentId: string }>();
-
+  
   const { data, error, isLoading } = useSWR<PageResponse>(
     documentId ? `http://localhost:1337/api/pages/${documentId}?populate[contents][populate]=*` : null,
     fetcher
@@ -77,6 +77,7 @@ export default function Page() {
             return <Image key={index} {...(component as ImageProps)} />
           case 'elements.paragraph':
             return <Paragraph key={index} {...(component as ParagraphProps)} />
+
           default:
             return null
         }
