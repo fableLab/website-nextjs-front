@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.13.0](https://github.com/fableLab/website-nextjs-front/compare/0.12.1...0.13.0) (2025-06-17)
+
+
+### Features
+
+* **Banner:** add Banner component ([6fde95a](https://github.com/fableLab/website-nextjs-front/commit/6fde95aed178e572e02d3ce2fe7871da362c326d))
+
 ## [0.12.2](https://github.com/fableLab/website-nextjs-front/compare/0.12.1...0.12.2) (2025-06-16)
 
 ## [0.12.1](https://github.com/fableLab/website-nextjs-front/compare/0.12.0...0.12.1) (2025-06-16)
