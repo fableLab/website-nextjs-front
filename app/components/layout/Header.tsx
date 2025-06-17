@@ -29,25 +29,36 @@ const headerBasicLinks = [
 
 export default function Header() {
   return (
-    <header className="bg-camelot-800 grid grid-cols-12 border-3 border-white">
-      <div className="md:col-span-4 col-span-12">
+    <header className="h-20 bg-camelot-800 grid grid-cols-12 border-3 border-white">
+      <div className="md:col-span-4 col-span-12 flex items-center h-full">
         <Link href="/">
-          <img src="/logo/logo_white.png" alt="Logo white" className='h-8 my-5 ms-4 p-1' />
+          <img src="/logo/logo_white.png" alt="Logo white" className="h-8 ms-4 p-1" />
         </Link>
       </div>
-      <nav className="md:col-span-8 col-span-0 md:visible invisible flex flex-row content-center">
+
+      <nav className="md:col-span-8 col-span-0 md:visible invisible flex flex-row items-center h-full">
         {headerLinks.map((link) => (
-          <div key={link.label} className="flex-1 border-l-3 border-white hidden md:inline-block relative">
+          <div
+            key={link.label}
+            className="flex-1 h-full border-l-[3px] border-white hidden md:flex justify-center relative"
+          >
             <Menu>
-              <MenuButton className="w-full text-white text-center inline-block py-5 text-2xl cursor-pointer">
-                {link.label}
-              </MenuButton>
+              <div className="flex items-center h-full">
+                <MenuButton className="w-full text-white text-center inline-block py-5 text-2xl cursor-pointer w-full">
+                  {link.label}
+                </MenuButton>
+              </div>
+
               <MenuItems
                 transition
-                className="mt-[3px] absolute z-10 origin-top-right bg-camelot-800 ring-3 ring-white w-full transition focus:outline-hidden"
+                className="absolute left-0 top-full origin-top-right bg-camelot-800 ring-3 ring-white w-full transition focus:outline-none"
               >
                 {link?.subLinks?.map((subLink) => (
-                  <Link href={subLink.href} key={subLink.label} className="block py-5 ring-3 ring-white bg-camelot-800 text-white text-center text-2xl">
+                  <Link
+                    href={subLink.href}
+                    key={subLink.label}
+                    className="w-full block py-5 ring-3 ring-white bg-camelot-800 text-white text-center text-2xl"
+                  >
                     <MenuItem>
                       <span>{subLink.label}</span>
                     </MenuItem>
@@ -59,13 +70,16 @@ export default function Header() {
         ))}
 
         {headerBasicLinks.map((link, key) => (
-          <div className="flex-1 border-l-3 border-white hidden md:inline-block relative" key={key}>
-            <Link href={link.href} className="text-white text-center w-full inline-block py-5 text-2xl">
+          <div key={key} className="flex-1 h-full border-l-[3px] border-white hidden md:flex items-center justify-center relative">
+            <Link
+              href={link.href}
+              className="text-white text-center w-full inline-block py-5 text-2xl"
+            >
               {link.label}
             </Link>
           </div>
         ))}
       </nav>
-    </header >
+    </header>
   );
 }

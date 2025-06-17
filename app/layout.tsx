@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Figtree, Playfair } from 'next/font/google';
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import Banner from "./components/ui/Banner";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -37,8 +38,11 @@ export default function RootLayout({
         <aside className="grid grid-cols-12 flex-grow">
           <div className="md:col-span-4 col-span-0 bg-lavender-200">
           </div>
-          <div className="md:col-span-8 col-span-12 bg-white py-4 px-6">
-            {children}
+          <div className="md:col-span-8 col-span-12">
+            <Banner title="Demo" />
+            <div className="py-4 px-6 bg-white">
+              {children}
+            </div>
           </div>
         </aside>
         <Footer />
