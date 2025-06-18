@@ -40,7 +40,7 @@ export default function RootLayout({
           </div>
           <div className="md:col-span-8 col-span-12">
             <Banner title="Demo" />
-            <div className="py-4 px-6 bg-white">
+            <div className="pt-6 pb-12 px-6 bg-white">
               {children}
             </div>
           </div>
