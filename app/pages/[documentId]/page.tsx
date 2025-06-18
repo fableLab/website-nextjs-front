@@ -43,9 +43,9 @@ const fetcher = (url: string) =>
 
 export default function Page() {
   const { documentId } = useParams<{ documentId: string }>();
-  
+
   const { data, error, isLoading } = useSWR<PageResponse>(
-    documentId ? `http://localhost:1337/api/pages/${documentId}?populate[contents][populate]=*` : null,
+    documentId ? `http://strapi.fable-lab.org/api/pages/${documentId}?populate[contents][populate]=*` : null,
     fetcher
   );
 
@@ -57,7 +57,7 @@ export default function Page() {
   if (error) return <p>Erreur lors du chargement de la page.</p>
 
   return (
-    <>
+    <div className="flex flex-col gap-9">
       {components.map((component: ComponentData, index) => {
 
         switch (component.__component) {
@@ -82,6 +82,6 @@ export default function Page() {
             return null
         }
       })}
-    </>
+    </div>
   )
 }

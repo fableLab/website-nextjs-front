@@ -8,7 +8,7 @@ export type LicenseProps = {
 
 export default function License({ description, licenseItems }: LicenseProps) {
   return (
-    <section className="py-8 space-y-6 text-black">
+    <section className="space-y-6 text-black">
       <h2 className='text-4xl text-azure-800 font-extrabold'>Licence libre.</h2>
       <p className="text-base">{description}</p>
       <div className='space-y-5'>
