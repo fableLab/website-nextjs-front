@@ -28,15 +28,13 @@ export default function FrameCard({ title, color, body, image }: FrameCardProps)
 
   const hasImage = !!image?.url;
 
-  const hasImage = !!image?.url;
-
   return (
     <div className={`flex flex-col md:flex-row border-6 p-10 rounded-lg w-full ${borderColors[color]}`} data-testid="frame-card">
       <div className={`w-full ${hasImage ? 'md:w-2/3' : ''} space-y-4`}>
         <h3 className="font-bold text-2xl text-black">{title}</h3>
         <BlocksRenderer content={body} />
       </div>
-       {hasImage && (
+      {hasImage && (
         <div className="w-full md:w-1/3 flex justify-center items-center mt-6 md:mt-0 pl-6">
           <img src={addHostIfSymbolicPath(image.url!)} alt="Frame Card" />
         </div>

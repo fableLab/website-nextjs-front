@@ -5,7 +5,7 @@ export type TitleProps = {
 
 export default function Title({ name, font = 'display' }: TitleProps) {
   return (
-    <h2 className={`text-4xl text-azure-800 font-bold my-13 font-${font}`}>
+    <h2 className={`text-4xl text-azure-800 font-bold font-${font}`}>
       {name}
     </h2>
   );

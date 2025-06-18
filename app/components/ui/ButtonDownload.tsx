@@ -4,23 +4,25 @@ import Image from "next/image";
 export type ButtonDownloadProps = {
   label: string;
   media: {
-    url: string;
+    url?: string;
   };
 };
 
 export default function ButtonDownload({ label, media }: ButtonDownloadProps) {
+  const colorAndCursor = media?.url ? "bg-bees-400 hover:bg-bees-200" : "bg-gray-200 cursor-not-allowed pointer-events-none text-red-400"
   return (
     <button>
       <Link
         download
-        href={`https://strapi.fable-lab.org${media.url}`}
-        className="rounded-full transition duration-200 w-64
-        grid grid-cols-6 gap-0 items-center place-items-center text-base
-        bg-bees-400 hover:bg-bees-200 py-4 px-6 group"
+        href={media?.url || "#"}
         target="_blank"
+        className={`${colorAndCursor}
+        rounded-full transition duration-200 w-64
+        grid grid-cols-6 gap-0 items-center place-items-center text-base
+        py-4 px-6 group`}
       >
         <div className="col-span-5">
-          <p className="text-center font-medium px-2">{label}</p>
+          <p className="text-center font-medium px-2">{!media?.url && "Fichier indisponible:"} {label}</p>
         </div>
         <div className="col-span-1 text-center relative w-9 h-9">
           {/* Icône normale */}
