@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.14.1](https://github.com/fableLab/website-nextjs-front/compare/0.13.0...0.14.1) (2025-06-18)
+
+
+### Features
+
+* **Paragraph:** add paragraph component ([5341ae7](https://github.com/fableLab/website-nextjs-front/commit/5341ae700ccdf0991456f32ca5cacc0cb2cbbb0d))
+
 # [0.14.0](https://github.com/fableLab/website-nextjs-front/compare/0.13.0...0.14.0) (2025-06-18)
 
 
