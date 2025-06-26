@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.15.0](https://github.com/fableLab/website-nextjs-front/compare/0.14.3...0.15.0) (2025-06-26)
+
+
+### Features
+
+* **title:** display page title in Banner component and HTML head tag ([351df27](https://github.com/fableLab/website-nextjs-front/commit/351df2781b3413e00502d83516da6b4e7079d8c4))
+
 ## [0.14.3](https://github.com/fableLab/website-nextjs-front/compare/0.14.2...0.14.3) (2025-06-26)
 
 ## [0.14.2](https://github.com/fableLab/website-nextjs-front/compare/0.14.1...0.14.2) (2025-06-18)
