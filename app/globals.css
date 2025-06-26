@@ -28,3 +28,13 @@ body {
     color: var(--foreground);
     font-family: var(--font-figtree), sans-serif;
 }
+
+ul {
+    @apply list-disc;
+    @apply list-inside;
+}
+
+ol {
+    @apply list-decimal;
+    @apply list-inside;
+}

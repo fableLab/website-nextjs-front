@@ -13,6 +13,7 @@ export type ParagraphProps = {
 const gridItemChoices: Record<string, string> = {
   "left": "col-span-8",
   "center": "col-span-8 col-start-3",
+  "full": "col-span-12",
   "right": "col-start-5 col-span-8"
 };
 
@@ -31,7 +32,7 @@ export default function Paragraph({ title, body, align }: ParagraphProps) {
           content={body}
           blocks={{
             link: ({ children, url }) => (
-              <Link href={url}>
+              <Link href={url} className="italic underline">
                 {children}
               </Link>
             ),
