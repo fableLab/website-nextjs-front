@@ -1,4 +1,5 @@
 'use client'
+import { useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import useSWR from 'swr'
 import Title, { TitleProps } from '@/app/components/ui/Title'
@@ -9,6 +10,7 @@ import License, { LicenseProps } from '@/app/components/ui/License'
 import FrameCard, { FrameCardProps } from '@/app/components/ui/FrameCard'
 import Image, { ImageProps } from '@/app/components/ui/Image'
 import Paragraph, { ParagraphProps } from '@/app/components/ui/Paragraph'
+import { useTitleStore } from '@/app/stores/titleStore'
 
 type ComponentPropsMap = {
   "elements.title": TitleProps;
@@ -31,6 +33,7 @@ type ComponentData = {
 
 type PageResponse = {
   data?: {
+    name: string
     contents?: ComponentData[]
   }
 }
@@ -42,16 +45,23 @@ const fetcher = (url: string) =>
   })
 
 export default function Page() {
+  const setTitle = useTitleStore(state => state.setTitle);
   const { documentId } = useParams<{ documentId: string }>();
 
   const { data, error, isLoading } = useSWR<PageResponse>(
     documentId ? `http://strapi.fable-lab.org/api/pages/${documentId}?populate[contents][populate]=*` : null,
-    fetcher
+    fetcher,
+    {
+      revalidateOnFocus: false,
+      dedupingInterval: 60000,
+    }
   );
 
   const components = data?.data?.contents ?? []
 
-  console.log("components: ", components)
+  useEffect(() => {
+    setTitle(data?.data?.name ?? '');
+  }, [data?.data?.name, setTitle]);
 
   if (isLoading) return <p>Chargement…</p>
   if (error) return <p>Erreur lors du chargement de la page.</p>
@@ -59,7 +69,6 @@ export default function Page() {
   return (
     <div className="flex flex-col gap-9">
       {components.map((component: ComponentData, index) => {
-
         switch (component.__component) {
           case 'elements.title':
             return <Title key={index} {...(component as TitleProps)} />
@@ -77,7 +86,6 @@ export default function Page() {
             return <Image key={index} {...(component as ImageProps)} />
           case 'elements.paragraph':
             return <Paragraph key={index} {...(component as ParagraphProps)} />
-
           default:
             return null
         }
