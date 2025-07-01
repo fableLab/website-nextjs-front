@@ -1,9 +1,12 @@
 {
+  "$schema": "https://unpkg.com/release-it/schema/release-it.json",
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": "angular",
       "infile": "CHANGELOG.md"
     }
+  },
+  "npm": {
+    "publish": false
   }
 }
-
