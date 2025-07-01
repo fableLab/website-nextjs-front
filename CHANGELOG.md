@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.16.0](https://github.com/fableLab/website-nextjs-front/compare/0.15.0...0.16.0) (2025-07-01)
+
+
+### Features
+
+* **Summary:** add summary component ([b1d0d37](https://github.com/fableLab/website-nextjs-front/commit/b1d0d375d9ecdf438c9befb516a7657b025f3f1b))
+
 # [0.15.0](https://github.com/fableLab/website-nextjs-front/compare/0.14.3...0.15.0) (2025-06-26)
 
 
