@@ -38,10 +38,11 @@ export default function RootLayout({
         <Header />
         <aside className="grid grid-cols-12 flex-grow">
           <div className="md:col-span-4 col-span-0 bg-lavender-200">
+            <div id="summary"></div>
           </div>
           <div className="md:col-span-8 col-span-12">
             <Banner title={title} />
-            <div className="pt-6 pb-12 px-6 bg-white">
+            <div className="pt-6 pb-12 px-6 bg-white flex flex-col gap-9" id="content">
               {children}
             </div>
           </div>

@@ -29,12 +29,12 @@ body {
     font-family: var(--font-figtree), sans-serif;
 }
 
-ul {
+#content ul {
     @apply list-disc;
     @apply list-inside;
 }
 
-ol {
+#content ol {
     @apply list-decimal;
     @apply list-inside;
 }

@@ -10,7 +10,9 @@ import License, { LicenseProps } from '@/app/components/ui/License'
 import FrameCard, { FrameCardProps } from '@/app/components/ui/FrameCard'
 import Image, { ImageProps } from '@/app/components/ui/Image'
 import Paragraph, { ParagraphProps } from '@/app/components/ui/Paragraph'
+import SummaryPortal from '@/app/components/ui/SummaryPortal'
 import { useTitleStore } from '@/app/stores/titleStore'
+import { useSummaryStore } from '@/app/stores/SummaryStore'
 
 type ComponentPropsMap = {
   "elements.title": TitleProps;
@@ -28,6 +30,8 @@ type ComponentKeys = keyof ComponentPropsMap;
 type ComponentData = {
   [K in ComponentKeys]: {
     __component: K;
+    id?: number,
+    name?: string
   } & ComponentPropsMap[K];
 }[ComponentKeys];
 
@@ -46,6 +50,9 @@ const fetcher = (url: string) =>
 
 export default function Page() {
   const setTitle = useTitleStore(state => state.setTitle);
+  const addItem = useSummaryStore((state) => state.addItem)
+  const clearSummary = useSummaryStore((state) => state.clear)
+
   const { documentId } = useParams<{ documentId: string }>();
 
   const { data, error, isLoading } = useSWR<PageResponse>(
@@ -63,11 +70,21 @@ export default function Page() {
     setTitle(data?.data?.name ?? '');
   }, [data?.data?.name, setTitle]);
 
+  useEffect(() => {
+    clearSummary();
+    components
+      .filter(c => ['elements.title', 'elements.sub-title'].includes(c.__component))
+      .forEach(({ id, name, __component }) => {
+        addItem(__component, name, id);
+      });
+  }, [components]);
+
   if (isLoading) return <p>Chargement…</p>
   if (error) return <p>Erreur lors du chargement de la page.</p>
 
   return (
     <div className="flex flex-col gap-9">
+      <SummaryPortal />
       {components.map((component: ComponentData, index) => {
         switch (component.__component) {
           case 'elements.title':
