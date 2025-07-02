@@ -23,6 +23,7 @@
     "release": "release-it"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.4",
     "@payloadcms/admin-bar": "3.44.0",
     "@payloadcms/db-postgres": "3.44.0",
     "@payloadcms/live-preview-react": "3.44.0",
