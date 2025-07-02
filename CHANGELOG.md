@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.19.0](https://github.com/fableLab/website-fable-lab/compare/0.18.0...0.19.0) (2025-07-02)
+
+
+### Features
+
+* **Footer:** implement Footer component in PayloadCMS ([246c01a](https://github.com/fableLab/website-fable-lab/commit/246c01ac68e15075b226bd7eaff16842fcb0ebc3))
+
 # [0.18.0](https://github.com/fableLab/website-fable-lab/compare/0.17.0...0.18.0) (2025-07-02)
 
 
