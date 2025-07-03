@@ -9,6 +9,7 @@ import { FormBlock } from '../../blocks/Form/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
 import { ImageBlock } from '../../blocks/ImageBlock/config'
 import { TitleBlock } from '../../blocks/TitleBlock/config'
+import { SubTitleBlock } from '../../blocks/SubTitleBlock/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
@@ -73,7 +74,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [Content, ImageBlock, TitleBlock],
+              blocks: [Content, ImageBlock, TitleBlock, SubTitleBlock],
               required: true,
               admin: {
                 initCollapsed: true,

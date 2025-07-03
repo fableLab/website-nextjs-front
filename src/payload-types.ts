@@ -148,7 +148,7 @@ export interface UserAuthOperations {
 export interface Page {
   id: number;
   title: string;
-  layout: (ContentBlock | ImageBlock | TitleBlock)[];
+  layout: (ContentBlock | ImageBlock | TitleBlock | SubTitleBlock)[];
   meta?: {
     title?: string | null;
     /**
@@ -403,6 +403,16 @@ export interface TitleBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'titleBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SubTitleBlock".
+ */
+export interface SubTitleBlock {
+  name: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'subTitleBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -845,6 +855,7 @@ export interface PagesSelect<T extends boolean = true> {
         content?: T | ContentBlockSelect<T>;
         imageBlock?: T | ImageBlockSelect<T>;
         titleBlock?: T | TitleBlockSelect<T>;
+        subTitleBlock?: T | SubTitleBlockSelect<T>;
       };
   meta?:
     | T
@@ -900,6 +911,15 @@ export interface ImageBlockSelect<T extends boolean = true> {
  * via the `definition` "TitleBlock_select".
  */
 export interface TitleBlockSelect<T extends boolean = true> {
+  name?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "SubTitleBlock_select".
+ */
+export interface SubTitleBlockSelect<T extends boolean = true> {
   name?: T;
   id?: T;
   blockName?: T;
