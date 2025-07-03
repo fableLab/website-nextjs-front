@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.27.0](https://github.com/fableLab/website-fable-lab/compare/0.26.0...0.27.0) (2025-07-03)
+
+
+### Features
+
+* **LicenseBlock:** implement LicenseBlock component in PayloadCMS ([ba9d780](https://github.com/fableLab/website-fable-lab/commit/ba9d7807fab955bda8782275d4a927c8529ee9ab))
+
 # [0.26.0](https://github.com/fableLab/website-fable-lab/compare/0.25.0...0.26.0) (2025-07-03)
 
 
