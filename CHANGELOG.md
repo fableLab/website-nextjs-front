@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.26.0](https://github.com/fableLab/website-fable-lab/compare/0.25.0...0.26.0) (2025-07-03)
+
+
+### Features
+
+* **ButtonsBlock:** implement ButtonsBlock component in PayloadCMS ([323d46c](https://github.com/fableLab/website-fable-lab/commit/323d46c4a1cdcf11dd8eb640a213d13a21eced59))
+
 # [0.25.0](https://github.com/fableLab/website-fable-lab/compare/0.24.0...0.25.0) (2025-07-03)
 
 
