@@ -4,7 +4,7 @@ import type { StaticImageData } from 'next/image'
 
 import { cn } from '@/utilities/ui'
 import NextImage from 'next/image'
-import React from 'react'
+import { React, useState } from 'react'
 
 import type { Props as MediaProps } from '../types'
 
@@ -30,10 +30,13 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
     loading: loadingFromProps,
   } = props
 
+  const [hasError, setHasError] = useState(false)
+
   let width: number | undefined
   let height: number | undefined
   let alt = altFromProps
   let src: StaticImageData | string = srcFromProps || ''
+
 
   if (!src && resource && typeof resource === 'object') {
     const { alt: altFromResource, height: fullHeight, url, width: fullWidth } = resource
@@ -57,10 +60,17 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
         .join(', ')
 
   return (
-    <picture className={cn(pictureClassName)}>
+  hasError ? (
+    <p className="py-32 bg-camelot-100 text-center text-camelot-800 w-1/2 mx-auto">
+      <span className="font-bold text-xl">Oups 😅</span>
+      <br />
+      L’image n’est pas là, mais les mots tiennent bon.
+      <br />
+      On va arranger ça très vite !
+    </p>) : (<picture className={cn(pictureClassName)}>
       <NextImage
         alt={alt || ''}
-        className={cn(imgClassName)}
+        className={cn(imgClassName, 'w-1/2 m-auto')}
         fill={fill}
         height={!fill ? height : undefined}
         placeholder="blur"
@@ -70,8 +80,9 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
         loading={loading}
         sizes={sizes}
         src={src}
+        onError={() => setHasError(true)}
         width={!fill ? width : undefined}
       />
-    </picture>
+    </picture>)
   )
 }
