@@ -10,6 +10,7 @@ import { MediaBlock } from '@/blocks/MediaBlock/Component'
 import { ImageBlock } from '@/blocks/ImageBlock/Component'
 import { TitleBlock } from '@/blocks/TitleBlock/Component'
 import { SubTitleBlock } from '@/blocks/SubTitleBlock/Component'
+import { ButtonDownloadBlock } from '@/blocks/ButtonDownloadBlock/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -19,7 +20,8 @@ const blockComponents = {
   mediaBlock: MediaBlock,
   imageBlock: ImageBlock,
   titleBlock: TitleBlock,
-  subTitleBlock: SubTitleBlock
+  subTitleBlock: SubTitleBlock,
+  buttonDownloadBlock: ButtonDownloadBlock
 }
 
 export const RenderBlocks: React.FC<{

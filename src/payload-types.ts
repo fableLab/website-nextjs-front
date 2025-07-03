@@ -148,7 +148,7 @@ export interface UserAuthOperations {
 export interface Page {
   id: number;
   title: string;
-  layout: (ContentBlock | ImageBlock | TitleBlock | SubTitleBlock)[];
+  layout: (ContentBlock | ImageBlock | TitleBlock | SubTitleBlock | ButtonDownloadBlock)[];
   meta?: {
     title?: string | null;
     /**
@@ -413,6 +413,17 @@ export interface SubTitleBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'subTitleBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ButtonDownloadBlock".
+ */
+export interface ButtonDownloadBlock {
+  label: string;
+  media: number | Media;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'buttonDownloadBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -856,6 +867,7 @@ export interface PagesSelect<T extends boolean = true> {
         imageBlock?: T | ImageBlockSelect<T>;
         titleBlock?: T | TitleBlockSelect<T>;
         subTitleBlock?: T | SubTitleBlockSelect<T>;
+        buttonDownloadBlock?: T | ButtonDownloadBlockSelect<T>;
       };
   meta?:
     | T
@@ -921,6 +933,16 @@ export interface TitleBlockSelect<T extends boolean = true> {
  */
 export interface SubTitleBlockSelect<T extends boolean = true> {
   name?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "ButtonDownloadBlock_select".
+ */
+export interface ButtonDownloadBlockSelect<T extends boolean = true> {
+  label?: T;
+  media?: T;
   id?: T;
   blockName?: T;
 }
