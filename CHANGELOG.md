@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.28.0](https://github.com/fableLab/website-fable-lab/compare/0.27.0...0.28.0) (2025-07-03)
+
+
+### Features
+
+* **Summary:** implement Summary component in PayloadCMS ([ad839fc](https://github.com/fableLab/website-fable-lab/commit/ad839fc6386d91e6f852674d644613bda2109608))
+
 # [0.27.0](https://github.com/fableLab/website-fable-lab/compare/0.26.0...0.27.0) (2025-07-03)
 
 
