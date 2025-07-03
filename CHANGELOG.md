@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.21.0](https://github.com/fableLab/website-fable-lab/compare/0.20.0...0.21.0) (2025-07-03)
+
+
+### Features
+
+* **Banner:** implement Banner component in PayloadCMS ([d8c7a79](https://github.com/fableLab/website-fable-lab/commit/d8c7a798abec2e8951cd5b37de50cb46c4e1d1de))
+
 # [0.20.0](https://github.com/fableLab/website-fable-lab/compare/0.19.0...0.20.0) (2025-07-03)
 
 
