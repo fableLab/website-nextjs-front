@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.22.0](https://github.com/fableLab/website-fable-lab/compare/0.21.0...0.22.0) (2025-07-03)
+
+
+### Features
+
+* **Image:** implement Image component in PayloadCMS ([3e2ec65](https://github.com/fableLab/website-fable-lab/commit/3e2ec657c842b25534bddc451d1402ebc29a61e4))
+
 # [0.21.0](https://github.com/fableLab/website-fable-lab/compare/0.20.0...0.21.0) (2025-07-03)
 
 
