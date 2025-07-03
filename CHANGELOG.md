@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.23.0](https://github.com/fableLab/website-fable-lab/compare/0.22.0...0.23.0) (2025-07-03)
+
+
+### Features
+
+* **Title:** implement Title component in PayloadCMS ([1140049](https://github.com/fableLab/website-fable-lab/commit/114004999964a3a34122db059898dd12d79e29e5))
+
 # [0.22.0](https://github.com/fableLab/website-fable-lab/compare/0.21.0...0.22.0) (2025-07-03)
 
 
