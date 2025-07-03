@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.20.0](https://github.com/fableLab/website-fable-lab/compare/0.19.0...0.20.0) (2025-07-03)
+
+
+### Features
+
+* **layout:** implement layout ([f38ca50](https://github.com/fableLab/website-fable-lab/commit/f38ca507481c84bf4d47d39a781af9dcc958cc7a))
+
 # [0.19.0](https://github.com/fableLab/website-fable-lab/compare/0.18.0...0.19.0) (2025-07-02)
 
 
