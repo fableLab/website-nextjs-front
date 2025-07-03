@@ -6,7 +6,7 @@ export const SubTitle: React.FC<Props> = (props) => {
   } = props
 
   return (
-    <h3 className="text-3xl text-azure-800 font-extrabold font basis" data-sub-title-id={id}>
+    <h3 className="text-3xl text-azure-800 font-extrabold font basis" id={id} data-summary-visible={true}>
       {name}
     </h3>
   )

@@ -6,11 +6,11 @@ import { Title } from '../../components/Title'
 
 type Props = TextBlockProps
 
-export const LicenseBlock: React.FC<Props> = ({ blocks, description }) => {
+export const LicenseBlock: React.FC<Props> = ({ blocks, description, id }) => {
 
   return (
     <section className="space-y-6 text-black">
-      <Title name="Licence libre" />
+      <Title name="Licence libre" id={id} />
       <p className="text-base">{description}</p>
       <div className='space-y-5'>
         <RenderBlocks blocks={blocks} />
