@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.25.0](https://github.com/fableLab/website-fable-lab/compare/0.24.0...0.25.0) (2025-07-03)
+
+
+### Features
+
+* **ButtonDownload:** implement ButtonDownload component in PayloadCMS ([5ed72dd](https://github.com/fableLab/website-fable-lab/commit/5ed72dd18c209f336aa7f41dabd3e5ed83067815))
+
 # [0.24.0](https://github.com/fableLab/website-fable-lab/compare/0.23.0...0.24.0) (2025-07-03)
 
 
