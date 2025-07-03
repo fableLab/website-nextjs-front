@@ -1,5 +1,12 @@
 # Changelog
 
+# [0.24.0](https://github.com/fableLab/website-fable-lab/compare/0.23.0...0.24.0) (2025-07-03)
+
+
+### Features
+
+* **SubTitle:** implement SubTitle component in PayloadCMS ([97d39e9](https://github.com/fableLab/website-fable-lab/commit/97d39e94a905c3f0ebe8a0758875469ca7c439ff))
+
 # [0.23.0](https://github.com/fableLab/website-fable-lab/compare/0.22.0...0.23.0) (2025-07-03)
 
 
