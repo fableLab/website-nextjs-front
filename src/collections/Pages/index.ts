@@ -11,6 +11,7 @@ import { ImageBlock } from '../../blocks/ImageBlock/config'
 import { TitleBlock } from '../../blocks/TitleBlock/config'
 import { SubTitleBlock } from '../../blocks/SubTitleBlock/config'
 import { ButtonDownloadBlock } from '../../blocks/ButtonDownloadBlock/config'
+import { ButtonsBlock } from '../../blocks/ButtonsBlock/config'
 import { hero } from '@/heros/config'
 import { slugField } from '@/fields/slug'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
@@ -75,7 +76,7 @@ export const Pages: CollectionConfig<'pages'> = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [Content, ImageBlock, TitleBlock, SubTitleBlock, ButtonDownloadBlock],
+              blocks: [Content, ImageBlock, TitleBlock, SubTitleBlock, ButtonsBlock],
               required: true,
               admin: {
                 initCollapsed: true,

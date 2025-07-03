@@ -11,6 +11,7 @@ import { ImageBlock } from '@/blocks/ImageBlock/Component'
 import { TitleBlock } from '@/blocks/TitleBlock/Component'
 import { SubTitleBlock } from '@/blocks/SubTitleBlock/Component'
 import { ButtonDownloadBlock } from '@/blocks/ButtonDownloadBlock/Component'
+import { ButtonsBlock } from '@/blocks/ButtonsBlock/Component'
 
 const blockComponents = {
   archive: ArchiveBlock,
@@ -21,7 +22,8 @@ const blockComponents = {
   imageBlock: ImageBlock,
   titleBlock: TitleBlock,
   subTitleBlock: SubTitleBlock,
-  buttonDownloadBlock: ButtonDownloadBlock
+  buttonDownloadBlock: ButtonDownloadBlock,
+  buttonsBlock: ButtonsBlock
 }
 
 export const RenderBlocks: React.FC<{
