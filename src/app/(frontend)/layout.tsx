@@ -50,7 +50,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           />
 
           <Header />
-          {children}
+          <aside className="grid grid-cols-12 flex-grow">
+            <div className="md:col-span-4 col-span-0 bg-lavender-200">
+              <div id="summary"></div>
+            </div>
+            <div className="md:col-span-8 col-span-12">
+                {children}
+            </div>
+          </aside>
           <Footer />
         </Providers>
       </body>

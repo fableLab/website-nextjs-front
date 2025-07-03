@@ -13,8 +13,12 @@ const columnFields: Field[] = [
   {
     name: 'size',
     type: 'select',
-    defaultValue: 'oneThird',
+    defaultValue: 'full',
     options: [
+      {
+        label: 'Full',
+        value: 'full',
+      },
       {
         label: 'One Third',
         value: 'oneThird',
@@ -26,11 +30,7 @@ const columnFields: Field[] = [
       {
         label: 'Two Thirds',
         value: 'twoThirds',
-      },
-      {
-        label: 'Full',
-        value: 'full',
-      },
+      }
     ],
   },
   {
