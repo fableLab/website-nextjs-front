@@ -148,7 +148,7 @@ export interface UserAuthOperations {
 export interface Page {
   id: number;
   title: string;
-  layout: (ContentBlock | ImageBlock | TitleBlock | SubTitleBlock | ButtonsBlock)[];
+  layout: (ContentBlock | ImageBlock | TitleBlock | SubTitleBlock | ButtonsBlock | LicenseBlock)[];
   meta?: {
     title?: string | null;
     /**
@@ -434,6 +434,28 @@ export interface ButtonDownloadBlock {
   id?: string | null;
   blockName?: string | null;
   blockType: 'buttonDownloadBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LicenseBlock".
+ */
+export interface LicenseBlock {
+  description?: string | null;
+  blocks?: LicenseItemBlock[] | null;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'licenseBlock';
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LicenseItemBlock".
+ */
+export interface LicenseItemBlock {
+  title: string;
+  description: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'licenseItemBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -878,6 +900,7 @@ export interface PagesSelect<T extends boolean = true> {
         titleBlock?: T | TitleBlockSelect<T>;
         subTitleBlock?: T | SubTitleBlockSelect<T>;
         buttonsBlock?: T | ButtonsBlockSelect<T>;
+        licenseBlock?: T | LicenseBlockSelect<T>;
       };
   meta?:
     | T
@@ -966,6 +989,30 @@ export interface ButtonsBlockSelect<T extends boolean = true> {
 export interface ButtonDownloadBlockSelect<T extends boolean = true> {
   label?: T;
   media?: T;
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LicenseBlock_select".
+ */
+export interface LicenseBlockSelect<T extends boolean = true> {
+  description?: T;
+  blocks?:
+    | T
+    | {
+        licenseItemBlock?: T | LicenseItemBlockSelect<T>;
+      };
+  id?: T;
+  blockName?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "LicenseItemBlock_select".
+ */
+export interface LicenseItemBlockSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
   id?: T;
   blockName?: T;
 }
